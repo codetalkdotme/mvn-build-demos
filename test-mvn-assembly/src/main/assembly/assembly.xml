@@ -1,0 +1,22 @@
+<assembly>
+	<id>assembly</id>
+	<formats>
+		<format>tar.gz</format><!--打包的文件格式,也可以有：war zip -->
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>${artifactId}-${version}.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/bin/</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>start.sh</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>
