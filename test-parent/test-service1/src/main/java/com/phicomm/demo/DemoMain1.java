@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @SpringBootApplication
 @RestController
-public class DemoMain {
+public class DemoMain1 {
 
     @Value("${config.env}")
     private String env;
@@ -20,7 +20,7 @@ public class DemoMain {
     private String serviceName;
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoMain.class, args);
+        SpringApplication.run(DemoMain1.class, args);
     }
 
     @RequestMapping("/")
